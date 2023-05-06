@@ -13,7 +13,7 @@ namespace RadPillThreshold
     public class Patches
     {
         [JsonObject(MemberSerialization.OptIn)]
-        [ModInfo("https://github.com/antoine-fresse")]
+        [ModInfo("https://github.com/antoine-fresse/betterradpill")]
         public class BetterRadPillsModSettings
         {
             [Option("Rad threshold", "How many rads before a dupe is allowed to consume a radpill (100/300/600 rads = minor/major/extreme sickness, 900 = incapacitated")]
@@ -21,7 +21,7 @@ namespace RadPillThreshold
             [JsonProperty]
             public float Rads { get; set; }
 
-            [Option("Faster animation", "Dupe ingest rad pills faster")]
+            [Option("Faster animation", "Dupes ingest rad pills faster (10s => 1s)")]
             [JsonProperty]
             public bool FasterAnim { get; set; }
 
