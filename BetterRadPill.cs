@@ -56,7 +56,8 @@ namespace RadPillThreshold
             {
                 if (___pill.info.id == "BasicRadPill")
                 {
-                    if(consumer.GetAmounts().Get(Db.Get().Amounts.RadiationBalance.Id).value < BetterRadPills.Settings.Rads)
+                    AmountInstance amount = consumer.GetAmounts().Get(Db.Get().Amounts.RadiationBalance.Id);
+                    if ((amount != null) && (amount.value < BetterRadPills.Settings.Rads))
                     {
                         __result = false;
                     }
